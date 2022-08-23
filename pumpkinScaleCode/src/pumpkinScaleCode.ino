@@ -24,7 +24,7 @@ Serial.println("Press - or z to decrease calibration factor");
 
 myScale.set_scale (); // initialize loadcell
 delay (3000) ; // let the loadcell settle
-myScale.tare (); // set the tare weight (or zero )
+myScale.tare (10); // set the tare weight (or zero )
 
 long zero_factor = myScale.read_average(); //Get a baseline reading
 Serial.print("Zero factor: "); //This can be used to remove the need to tare the scale. Useful in permanent scale projects.
